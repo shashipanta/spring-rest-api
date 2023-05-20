@@ -36,5 +36,15 @@ http://localhost:8080/api/tenants/{id}/deactivate <br>
 `@Path("name")` and `@Transactional` was used.
 * To create our own error handlers `@ControllerAdvice`, <br>
   `@ExceptionHandler(CustomExceptionType.class)`
-  `@ResponseStatus(HttpStatus.NOT_FOUND)` can be used.
+  `@ResponseStatus(HttpStatus.NOT_FOUND)` can be used. <br>
+  eg: <br>
+  ```java
+    @ExceptionHandler(TenantNotFoundException.class)
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    @ResponseBody
+    public ErrorResponse handleTenantNotFoundException(final TenantNotFoundException ex) {
+        logger.error("Tenant not found thrown");
+        return new ErrorResponse("TENANT_NOT_FOUND", "The tenant was not found");
+    }
+  ```
 
