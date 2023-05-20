@@ -11,7 +11,7 @@
 | DELETE | /api/tenants/delete/:tenantId | To delete a single Tenant |
 | PUT | /api/tenants/update/:tenantId | To edit the details of a single cause |
 | PUT | /api/tenants/:tenantId/activate | To activate the status of Tenant |
-| PUT | /api/tenants/:tenantId/deactivate | To activate the status of Tenant |
+| PUT | /api/tenants/:tenantId/deactivate | To deactivate the status of Tenant |
 
 http://localhost:8080/api/tenants/ <br>
 http://localhost:8080/api/tenants/1 <br>
