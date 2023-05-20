@@ -1,3 +1,10 @@
+### Domain Class : Tenant
+Tenant domain class contains bare minimum properties like : <br>
+`Integer id  : primary key` <br>
+`String name : not null field` <br>
+`String address` <br>
+`LocalDateTime joinedDate` <br>
+`Boolean active : denoting active status of tenant` <br>
 
 ### API Endpoints
 
@@ -13,6 +20,7 @@
 | PUT | /api/tenants/:tenantId/activate | To activate the status of Tenant |
 | PUT | /api/tenants/:tenantId/deactivate | To deactivate the status of Tenant |
 
+## Actual endpoints
 http://localhost:8080/api/tenants/ <br>
 http://localhost:8080/api/tenants/1 <br>
 http://localhost:8080/api/tenants/update/1 <br>
@@ -20,3 +28,4 @@ http://localhost:8080/api/tenants/delete/1 <br>
 http://localhost:8080/api/tenants/active <br>
 http://localhost:8080/api/tenants/{id}/activate <br>
 http://localhost:8080/api/tenants/{id}/deactivate <br>
+
