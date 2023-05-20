@@ -28,4 +28,13 @@ http://localhost:8080/api/tenants/delete/1 <br>
 http://localhost:8080/api/tenants/active <br>
 http://localhost:8080/api/tenants/{id}/activate <br>
 http://localhost:8080/api/tenants/{id}/deactivate <br>
+@ExceptionHandler(TenantNotFoundException.class)
+@ResponseStatus(HttpStatus.NOT_FOUND)
+@ResponseBody
+## My Findings
+* In order to implement toggle function of active status, `@Modifying` in conjunction with 
+`@Path("name")` and `@Transactional` was used.
+* To create our own error handlers `@ControllerAdvice`, <br>
+  `@ExceptionHandler(CustomExceptionType.class)`
+  `@ResponseStatus(HttpStatus.NOT_FOUND)` can be used.
 
