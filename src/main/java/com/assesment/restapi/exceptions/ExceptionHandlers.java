@@ -19,7 +19,6 @@ public class ExceptionHandlers {
     @ResponseStatus(HttpStatus.NOT_FOUND)
     @ResponseBody
     public ErrorResponse handleTenantNotFoundException(final TenantNotFoundException ex) {
-        String message = "Tenant with id : %d was not found.";
         logger.error("Tenant not found thrown");
         return new ErrorResponse("TENANT_NOT_FOUND", "The tenant was not found");
     }
